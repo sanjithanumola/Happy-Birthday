@@ -81,29 +81,13 @@ button:hover{
 <body>
 
 <div class="card">
-    <h1>Happy Birthday Champ 🎉</h1>
+    <h1>Happy Birthday Nayan 🎉</h1>
     <div class="date">27 February 🔥</div>
     <div class="message">
         A legend was born on this day 👑<br>
         May this year bring success, strength and happiness!
     </div>
-    <button onclick="surprise()">Click for Surprise 🎆</button>
-</div>
-
-<script>
-function surprise(){
-    alert("🎉 27 FEBRUARY – A KING WAS BORN! 👑🔥");
-}
-
-for(let i=0;i<10;i++){
-    let b=document.createElement("div");
-    b.className="balloon";
-    b.style.left=Math.random()*100+"vw";
-    b.style.background=["red","blue","yellow","green","orange"][Math.floor(Math.random()*5)];
-    b.style.animationDuration=(5+Math.random()*5)+"s";
-    document.body.appendChild(b);
-}
-</script>
+    
 
 </body>
 </html>
