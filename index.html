@@ -1,93 +1,209 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday 🎉</title>
+
+<title>Happy Birthday Nayan</title>
 
 <style>
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#000428,#004e92);
-    font-family:Arial, sans-serif;
-    color:white;
-    text-align:center;
-    overflow:hidden;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
+
+
+/* COLORFUL BACKGROUND */
+
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,
+#ff4e50,
+#f9d423,
+#24c6dc,
+#5433ff);
+
+background-size:400% 400%;
+
+animation:bgMove 10s infinite alternate;
+
+color:white;
+
+}
+
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+
+/* CARD */
 
 .card{
-    background:rgba(0,0,0,0.6);
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 0 30px gold;
-    animation:fadeIn 2s ease-in-out;
+
+background:rgba(255,255,255,0.1);
+
+padding:50px;
+
+border-radius:25px;
+
+text-align:center;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0px 20px 50px rgba(0,0,0,0.4);
+
+max-width:600px;
+
 }
+
+
+/* TITLE */
 
 h1{
-    font-size:45px;
-    color:gold;
-    text-shadow:0 0 20px gold;
+
+font-size:50px;
+
+margin-bottom:10px;
+
+letter-spacing:1px;
+
 }
+
+
+/* NAME */
+
+.name{
+
+font-size:36px;
+
+font-weight:bold;
+
+color:#FFD700;
+
+margin-bottom:15px;
+
+}
+
+
+/* LINE */
+
+.line{
+
+width:80px;
+height:4px;
+
+background:white;
+
+margin:20px auto;
+
+border-radius:5px;
+
+}
+
+
+/* DATE */
 
 .date{
-    font-size:22px;
-    margin:10px 0;
+
+font-size:20px;
+
+margin-bottom:20px;
+
 }
+
+
+/* MESSAGE */
 
 .message{
-    font-size:18px;
-    margin-top:15px;
+
+font-size:20px;
+
+line-height:1.8;
+
 }
 
-button{
-    margin-top:25px;
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:gold;
-    font-weight:bold;
-    cursor:pointer;
+
+/* FOOTER */
+
+.footer{
+
+margin-top:25px;
+
+font-size:14px;
+
+opacity:0.9;
+
 }
 
-button:hover{
-    background:white;
-}
-
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-.balloon{
-    position:absolute;
-    bottom:-120px;
-    width:50px;
-    height:70px;
-    border-radius:50%;
-    animation:float 7s linear infinite;
-}
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    100%{transform:translateY(-110vh);}
-}
 </style>
+
 </head>
 
 <body>
 
+
 <div class="card">
-    <h1>Happy Birthday Nayan 🎉</h1>
-    <div class="date">27 February 🔥</div>
-    <div class="message">
-        A legend was born on this day 👑<br>
-        May this year bring success, strength and happiness!
-    </div>
-    
+
+
+<h1>🎉 Happy Birthday 🎉</h1>
+
+
+<div class="name">
+
+Nayan 👑
+
+</div>
+
+
+<div class="line"></div>
+
+
+<div class="date">
+
+27 February 🎂
+
+</div>
+
+
+<div class="message">
+
+Wishing you a wonderful birthday filled with
+joy, success and happiness.
+
+May your dreams come true and your future
+shine bright like stars ⭐
+
+Stay happy and keep smiling 😊
+
+</div>
+
+
+<div class="footer">
+
+Best Wishes 🎉
+
+</div>
+
+
+</div>
+
 
 </body>
+
 </html>
