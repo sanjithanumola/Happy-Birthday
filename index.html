@@ -13,41 +13,67 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 
-/* COLORFUL BACKGROUND */
+/* MODERN BACKGROUND */
 
 body{
 
 height:100vh;
-
 display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,
-#ff4e50,
-#f9d423,
-#24c6dc,
-#5433ff);
-
-background-size:400% 400%;
-
-animation:bgMove 10s infinite alternate;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
 
 color:white;
+overflow:hidden;
 
 }
 
 
-/* BACKGROUND ANIMATION */
+/* SOFT LIGHT EFFECT */
 
-@keyframes bgMove{
+body::before{
 
-0%{background-position:left;}
-100%{background-position:right;}
+content:"";
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(circle,#ff7b00,transparent);
+
+top:-200px;
+right:-200px;
+
+opacity:0.4;
+
+filter:blur(100px);
+
+}
+
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(circle,#00eaff,transparent);
+
+bottom:-200px;
+left:-200px;
+
+opacity:0.4;
+
+filter:blur(100px);
 
 }
 
@@ -56,19 +82,40 @@ color:white;
 
 .card{
 
-background:rgba(255,255,255,0.1);
+width:650px;
 
-padding:50px;
+padding:60px;
 
-border-radius:25px;
+border-radius:20px;
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.1);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0px 20px 60px rgba(0,0,0,0.6);
 
 text-align:center;
 
-backdrop-filter:blur(10px);
+animation:fade 1.5s ease;
 
-box-shadow:0px 20px 50px rgba(0,0,0,0.4);
+}
 
-max-width:600px;
+
+/* FADE */
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0px);
+}
 
 }
 
@@ -77,11 +124,9 @@ max-width:600px;
 
 h1{
 
-font-size:50px;
-
+font-size:48px;
 margin-bottom:10px;
-
-letter-spacing:1px;
+font-weight:600;
 
 }
 
@@ -90,28 +135,21 @@ letter-spacing:1px;
 
 .name{
 
-font-size:36px;
-
-font-weight:bold;
-
+font-size:38px;
 color:#FFD700;
-
 margin-bottom:15px;
 
 }
 
 
-/* LINE */
+/* DIVIDER */
 
 .line{
 
-width:80px;
-height:4px;
-
-background:white;
-
+width:60px;
+height:3px;
+background:#FFD700;
 margin:20px auto;
-
 border-radius:5px;
 
 }
@@ -122,7 +160,7 @@ border-radius:5px;
 .date{
 
 font-size:20px;
-
+opacity:0.9;
 margin-bottom:20px;
 
 }
@@ -133,8 +171,8 @@ margin-bottom:20px;
 .message{
 
 font-size:20px;
-
 line-height:1.8;
+opacity:0.95;
 
 }
 
@@ -143,11 +181,11 @@ line-height:1.8;
 
 .footer{
 
-margin-top:25px;
+margin-top:30px;
 
 font-size:14px;
 
-opacity:0.9;
+opacity:0.7;
 
 }
 
@@ -158,10 +196,11 @@ opacity:0.9;
 <body>
 
 
+
 <div class="card">
 
 
-<h1>🎉 Happy Birthday 🎉</h1>
+<h1>Happy Birthday 🎉</h1>
 
 
 <div class="name">
@@ -176,18 +215,22 @@ Nayan 👑
 
 <div class="date">
 
-27 February 🎂
+27 February 2026 🎂
 
 </div>
 
 
 <div class="message">
 
-Wishing you a wonderful birthday filled with
-joy, success and happiness.
+Wishing you a day filled with happiness,
+success and unforgettable memories.
 
-May your dreams come true and your future
-shine bright like stars ⭐
+<br><br>
+
+May your future shine bright and your dreams
+become reality.
+
+<br><br>
 
 Stay happy and keep smiling 😊
 
@@ -196,12 +239,13 @@ Stay happy and keep smiling 😊
 
 <div class="footer">
 
-Best Wishes 🎉
+Designed with ❤️
 
 </div>
 
 
 </div>
+
 
 
 </body>
